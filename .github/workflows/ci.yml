@@ -44,7 +44,7 @@ jobs:
     runs-on: macos-12
     steps:
       - name: checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       # TODO(#248): On 2022-12-16 there were build failures being unable to
       # `brew upgrade python@3.10` during setup due to symlinks in
       # /usr/local/bin.  On 2023-01-03 there were similar failures with the
@@ -95,7 +95,7 @@ jobs:
     container: ubuntu:focal
     steps:
       - name: checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: setup
         run: ./scripts/continuous_integration/github_actions/ros_foxy/setup
         shell: bash
@@ -108,7 +108,7 @@ jobs:
     container: ubuntu:focal
     steps:
       - name: checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: setup
         run: ./scripts/continuous_integration/github_actions/ubuntu_focal/setup
         shell: bash
@@ -121,7 +121,7 @@ jobs:
     container: ubuntu:focal
     steps:
       - name: checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: setup
         run: ./scripts/continuous_integration/github_actions/ubuntu_apt/setup
         shell: bash
